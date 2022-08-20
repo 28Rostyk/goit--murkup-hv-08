@@ -1,0 +1,71 @@
+.section__team {
+  background-color: var(--background-color-team);
+}
+
+.section-team__title {
+  margin-bottom: 50px;
+}
+
+.team-list {
+  display: flex;
+  text-align: center;
+}
+
+.team-content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.section-team__subtitle {
+  font-weight: var(--font-waight-medium);
+  font-size: var(--font-size-secondary);
+  line-height: 1.19;
+  text-transform: none;
+}
+
+.section-team__text {
+  font-size: var(--font-size-secondary);
+  line-height: 1.19;
+  margin-top: 10px;
+  margin-bottom: 16px;
+}
+
+.team-list .team-list__item {
+  background: var(--background-color-page);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-list .team-list__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__link {
+    @extend %align;
+    width: 44px;
+    height: 44px;
+    color: var(--icon-color);
+    border-radius: 50%;
+    transition: background-color var(--transition-duration) var(--transition-timing-function),
+      color var(--transition-duration) var(--transition-timing-function);
+
+    &:hover,
+    &:focus {
+      background-color: var(--accent-text-color);
+      color: var(--white-color);
+    }
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+}
