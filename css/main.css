@@ -1204,5 +1204,6 @@ img {
 @media screen and (min-width: 1200px) {
   .cards-content {
     max-width: 370px;
+    flex-grow: 0;
   }
 }/*# sourceMappingURL=main.css.map */
