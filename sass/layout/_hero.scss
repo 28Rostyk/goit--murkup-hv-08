@@ -1,25 +1,22 @@
 .hero {
-  background-color: #c4c4c4;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/bground-img.jpg);
-  max-width: 1600px;
-  height: 600px;
+  max-width: 480px;
+  height: 400px;
   margin-left: auto;
   margin-right: auto;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   text-align: center;
-  padding: 200px 0;
+  padding: 118px 0;
 }
 
 .hero-title {
-  @include font(44px, 900, 60px);
+  @include font(26px, 900, 42px);
   color: var(--white-color);
 
   letter-spacing: var(--letter-spacing-secondary);
   text-transform: uppercase;
-  width: 696px;
+  max-width: 360px;
   margin: 0 auto;
   margin-bottom: 30px;
 }
@@ -35,5 +32,59 @@
   &:hover,
   &:focus {
     background-color: #188ce8;
+  }
+}
+@media screen and (max-width: 767px) {
+  .hero {
+    background-color: #c4c4c4;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../../images/studio/Header-mobile.jpg);
+  }
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('..//../images/studio/Header-mobile@2x.jpg');
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../../images/studio/Header-tablet.jpg);
+    max-width: 768px;
+  }
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('..//../images/studio/Header-tablet@2x.jpg');
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../../images/studio/header-desktop.jpg);
+    max-width: 1600px;
+    height: 600px;
+    padding: 200px 0;
+  }
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('..//../images/studio/Header-desktop@2x.jpg');
+    }
+  }
+
+  .hero-title {
+    @include font(44px, 900, 60px);
+    color: var(--white-color);
+
+    letter-spacing: var(--letter-spacing-secondary);
+    max-width: 696px;
   }
 }

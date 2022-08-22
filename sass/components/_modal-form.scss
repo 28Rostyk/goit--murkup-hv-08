@@ -76,6 +76,7 @@
 .modal-form__label {
   @extend %align;
   margin-bottom: 30px;
+  @include font(12px, 400, 14px);
 }
 
 .modal-form__fake-checkbox {
@@ -109,6 +110,7 @@
 }
 
 .modal-form__check-link {
+  @include font(12px, 400, 14px);
   color: var(--accent-text-color);
   border-bottom: 1px solid var(--accent-text-color);
 }
@@ -122,5 +124,15 @@
   &:focus {
     background-color: #188ce8;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form__check-link {
+    @include font(14px, 400, 24px);
+  }
+
+  .modal-form__label {
+    @include font(14px, 400, 24px);
   }
 }

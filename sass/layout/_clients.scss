@@ -1,18 +1,16 @@
 .section-clients__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .clients-list {
   display: flex;
-
-  &__item:not(:last-child) {
-    margin-right: 30px;
-  }
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .clients-list__link {
   @extend %align;
-  width: 170px;
+  width: 210px;
   height: 92px;
   color: var(--icon-color);
   border: 1px solid var(--icon-color);
@@ -29,4 +27,27 @@
 
 .clients-list__logo {
   fill: currentColor;
+}
+
+@media screen and (max-width: 479px) {
+  .clients-list__link {
+    width: 120px;
+  }
+
+  .clients-list {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .clients-list__link {
+    width: 226px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients-list__link {
+    width: 170px;
+  }
 }

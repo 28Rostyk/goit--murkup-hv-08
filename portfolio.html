@@ -19,10 +19,10 @@
     <!--======================================HEADER================================-->
     <header class="header">
       <div class="container header__container">
-        <a class="logo" href="./index.html " lang="en"
-          ><span class="logo__accent">Web</span>Studio</a
-        >
         <nav class="nav header__nav">
+          <a class="logo" href="./index.html " lang="en"
+            ><span class="logo__accent">Web</span>Studio</a
+          >
           <ul class="menu list">
             <li class="menu__item">
               <a href="./index.html" class="menu__link link">Студия</a>
@@ -33,6 +33,11 @@
             <li class="menu__item"><a href="" class="menu__link link">Контакты</a></li>
           </ul>
         </nav>
+        <button class="mobile-menu-open" data-menu-open type="button">
+          <svg class="mobile-menu-open__icon" width="40" height="40">
+            <use href=".//images/icons.svg#burger-icon"></use>
+          </svg>
+        </button>
         <ul class="address header__address list">
           <li class="address__item">
             <a href="mailto:info@devstudio.com" class="address__link link"
@@ -50,6 +55,56 @@
             >
           </li>
         </ul>
+      </div>
+      <div class="mobile-menu" data-menu>
+        <div class="container mobile-menu__container">
+          <button class="mobile-menu__close-btn" data-menu-close>
+            <svg class="mobile-menu-close-icon" width="40" height="40">
+              <use href=".//images/icons.svg#close_menu"></use>
+            </svg>
+          </button>
+          <div class="mobile-menu-content">
+            <ul class="mobile-menu-list list">
+              <li class="mobile-menu-list__item">
+                <a href="./index.html" class="mobile-menu-list__link link menu__link_active"
+                  >Студия</a
+                >
+              </li>
+              <li class="mobile-menu-list__item">
+                <a href="./portfolio.html" class="mobile-menu-list__link link">Портфолио</a>
+              </li>
+              <li class="mobile-menu-list__item">
+                <a href="" class="mobile-menu-list__link link">Контакты</a>
+              </li>
+            </ul>
+            <ul class="address mobile-menu-address list">
+              <li class="mobile-menu-address__item">
+                <a href="tel:+380961111111" class="mobile-menu-address__link link"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li class="mobile-menu-address__item">
+                <a href="mailto:info@devstudio.com" class="mobile-menu-address__link link">
+                  info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mobile-menu-social list">
+              <li class="mobile-menu-social__item">
+                <a href="" class="mobile-menu-social__link link">Instagram</a>
+              </li>
+              <li class="mobile-menu-social__item">
+                <a href="" class="mobile-menu-social__link link">Twitter</a>
+              </li>
+              <li class="mobile-menu-social__item">
+                <a href="" class="mobile-menu-social__link link">Facebook</a>
+              </li>
+              <li class="mobile-menu-social__item">
+                <a href="" class="mobile-menu-social__link link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -78,12 +133,54 @@
             <li class="portfolio-cards__item">
               <a href="" class="portfolio-cards__link link"
                 ><div class="cards-thumb">
-                  <img
-                    src="./images/portfolio/portfolio-img1.jpg"
-                    alt="ноутбук"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images//portfolio/card-desktop1.webp   1x,
+                        ./images/portfolio/card-desktop1@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images//portfolio/card-desktop1.jpg   1x,
+                        ./images/portfolio/card-desktop1@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-tablet1.webp    1x,
+                        ./images/portfolio/card-tablet1@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-tablet1.jpg    1x,
+                        ./images/portfolio/card-tablet1@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-mobile1.webp    1x,
+                        ./images/portfolio/card-mobile1@2x.webp 2x
+                      "
+                      media="(min-width: 320px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-mobile1.jpg    1x,
+                        ./images/portfolio/card-mobile1@2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img src="./images/portfolio/card-mobile1.jpg" alt="ноутбук" />
+                  </picture>
                   <div class="text-wrapper">
                     <p class="text-overlay">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -101,12 +198,54 @@
             <li class="portfolio-cards__item">
               <a href="" class="portfolio-cards__link link"
                 ><div class="cards-thumb">
-                  <img
-                    src="./images/portfolio/portfolio-img2.jpg"
-                    alt="два баскетболиста"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images//portfolio/card-desktop2.webp   1x,
+                        ./images/portfolio/card-desktop2@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images//portfolio/card-desktop2.jpg   1x,
+                        ./images/portfolio/card-desktop2@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-tablet2.webp    1x,
+                        ./images/portfolio/card-tablet2@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-tablet2.jpg    1x,
+                        ./images/portfolio/card-tablet2@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-mobile2.webp    1x,
+                        ./images/portfolio/card-mobile2@2x.webp 2x
+                      "
+                      media="(min-width: 320px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-mobile2.jpg    1x,
+                        ./images/portfolio/card-mobile2@2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img src="./images/portfolio/card-mobile2.jpg" alt="ноутбук" />
+                  </picture>
                   <div class="text-wrapper">
                     <p class="text-overlay">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -124,12 +263,54 @@
             <li class="portfolio-cards__item">
               <a href="" class="portfolio-cards__link link"
                 ><div class="cards-thumb">
-                  <img
-                    src="./images/portfolio/portfolio-img3.jpg"
-                    alt="логотип seafoof"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images//portfolio/card-desktop3.webp   1x,
+                        ./images/portfolio/card-desktop3@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images//portfolio/card-desktop3.jpg   1x,
+                        ./images/portfolio/card-desktop3@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-tablet3.webp    1x,
+                        ./images/portfolio/card-tablet3@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-tablet3.jpg    1x,
+                        ./images/portfolio/card-tablet3@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-mobile3.webp    1x,
+                        ./images/portfolio/card-mobile3@2x.webp 2x
+                      "
+                      media="(min-width: 320px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-mobile3.jpg    1x,
+                        ./images/portfolio/card-mobile3@2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img src="./images/portfolio/card-mobile3.jpg" alt="ноутбук" />
+                  </picture>
                   <div class="text-wrapper">
                     <p class="text-overlay">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -147,12 +328,54 @@
             <li class="portfolio-cards__item">
               <a href="" class="portfolio-cards__link link"
                 ><div class="cards-thumb">
-                  <img
-                    src="./images/portfolio/portfolio-img4.jpg"
-                    alt="наушники"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images//portfolio/card-desktop4.webp   1x,
+                        ./images/portfolio/card-desktop4@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images//portfolio/card-desktop4.jpg   1x,
+                        ./images/portfolio/card-desktop4@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-tablet4.webp    1x,
+                        ./images/portfolio/card-tablet4@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-tablet4.jpg    1x,
+                        ./images/portfolio/card-tablet4@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-mobile4.webp    1x,
+                        ./images/portfolio/card-mobile4@2x.webp 2x
+                      "
+                      media="(min-width: 320px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-mobile4.jpg    1x,
+                        ./images/portfolio/card-mobile4@2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img src="./images/portfolio/card-mobile4.jpg" alt="ноутбук" />
+                  </picture>
                   <div class="text-wrapper">
                     <p class="text-overlay">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -170,12 +393,54 @@
             <li class="portfolio-cards__item">
               <a href="" class="portfolio-cards__link link"
                 ><div class="cards-thumb">
-                  <img
-                    src="./images/portfolio/portfolio-img5.jpg"
-                    alt="две коробки"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images//portfolio/card-desktop5.webp   1x,
+                        ./images/portfolio/card-desktop5@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images//portfolio/card-desktop5.jpg   1x,
+                        ./images/portfolio/card-desktop5@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-tablet5.webp    1x,
+                        ./images/portfolio/card-tablet5@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-tablet5.jpg    1x,
+                        ./images/portfolio/card-tablet5@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-mobile5.webp    1x,
+                        ./images/portfolio/card-mobile5@2x.webp 2x
+                      "
+                      media="(min-width: 320px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-mobile5.jpg    1x,
+                        ./images/portfolio/card-mobile5@2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img src="./images/portfolio/card-mobile5.jpg" alt="ноутбук" />
+                  </picture>
                   <div class="text-wrapper">
                     <p class="text-overlay">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -193,12 +458,54 @@
             <li class="portfolio-cards__item">
               <a href="" class="portfolio-cards__link link"
                 ><div class="cards-thumb">
-                  <img
-                    src="./images/portfolio/portfolio-img6.jpg"
-                    alt="монитор"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images//portfolio/card-desktop6.webp   1x,
+                        ./images/portfolio/card-desktop6@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images//portfolio/card-desktop6.jpg   1x,
+                        ./images/portfolio/card-desktop6@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-tablet6.webp    1x,
+                        ./images/portfolio/card-tablet6@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-tablet6.jpg    1x,
+                        ./images/portfolio/card-tablet6@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-mobile6.webp    1x,
+                        ./images/portfolio/card-mobile6@2x.webp 2x
+                      "
+                      media="(min-width: 320px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-mobile6.jpg    1x,
+                        ./images/portfolio/card-mobile6@2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img src="./images/portfolio/card-mobile6.jpg" alt="ноутбук" />
+                  </picture>
                   <div class="text-wrapper">
                     <p class="text-overlay">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -216,12 +523,54 @@
             <li class="portfolio-cards__item">
               <a href="" class="portfolio-cards__link link"
                 ><div class="cards-thumb">
-                  <img
-                    src="./images/portfolio/portfolio-img7.jpg"
-                    alt="журнал"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images//portfolio/card-desktop7.webp   1x,
+                        ./images/portfolio/card-desktop7@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images//portfolio/card-desktop7.jpg   1x,
+                        ./images/portfolio/card-desktop7@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-tablet7.webp    1x,
+                        ./images/portfolio/card-tablet7@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-tablet7.jpg    1x,
+                        ./images/portfolio/card-tablet7@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-mobile7.webp    1x,
+                        ./images/portfolio/card-mobile7@2x.webp 2x
+                      "
+                      media="(min-width: 320px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-mobile7.jpg    1x,
+                        ./images/portfolio/card-mobile7@2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img src="./images/portfolio/card-mobile7.jpg" alt="ноутбук" />
+                  </picture>
                   <div class="text-wrapper">
                     <p class="text-overlay">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -239,12 +588,54 @@
             <li class="portfolio-cards__item">
               <a href="" class="portfolio-cards__link link"
                 ><div class="cards-thumb">
-                  <img
-                    src="./images/portfolio/portfolio-img8.jpg"
-                    alt="бирка"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images//portfolio/card-desktop8.webp   1x,
+                        ./images/portfolio/card-desktop8@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images//portfolio/card-desktop8.jpg   1x,
+                        ./images/portfolio/card-desktop8@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-tablet8.webp    1x,
+                        ./images/portfolio/card-tablet8@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-tablet8.jpg    1x,
+                        ./images/portfolio/card-tablet8@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-mobile8.webp    1x,
+                        ./images/portfolio/card-mobile8@2x.webp 2x
+                      "
+                      media="(min-width: 320px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-mobile8.jpg    1x,
+                        ./images/portfolio/card-mobile8@2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img src="./images/portfolio/card-mobile8.jpg" alt="ноутбук" />
+                  </picture>
                   <div class="text-wrapper">
                     <p class="text-overlay">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -262,12 +653,54 @@
             <li class="portfolio-cards__item">
               <a href="" class="portfolio-cards__link link"
                 ><div class="cards-thumb">
-                  <img
-                    src="./images/portfolio/portfolio-img9.jpg"
-                    alt="робота за ноутбуком"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images//portfolio/card-desktop9.webp   1x,
+                        ./images/portfolio/card-desktop9@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images//portfolio/card-desktop9.jpg   1x,
+                        ./images/portfolio/card-desktop9@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-tablet9.webp    1x,
+                        ./images/portfolio/card-tablet9@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-tablet9.jpg    1x,
+                        ./images/portfolio/card-tablet9@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-mobile9.webp    1x,
+                        ./images/portfolio/card-mobile9@2x.webp 2x
+                      "
+                      media="(min-width: 320px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/card-mobile9.jpg    1x,
+                        ./images/portfolio/card-mobile9@2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img src="./images/portfolio/card-mobile9.jpg" alt="ноутбук" />
+                  </picture>
                   <div class="text-wrapper">
                     <p class="text-overlay">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -290,58 +723,60 @@
     <!--==================================================FOOTER====================================-->
     <footer class="footer">
       <div class="container footer__container">
-        <div class="address-container">
-          <a class="logo footer__logo" href="./index.html" lang="en"
-            ><span class="logo__accent">Web</span>Studio</a
-          >
-          <address class="footer-address">
-            <ul class="address-list list">
-              <li class="address-list__item">
-                <a
-                  href="https://bit.ly/3pXMvUd"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="address-list__link address-list__link_active"
-                  >г. Киев, пр-т Леси Украинки, 26</a
-                >
+        <div class="footer-tablet-wrapper">
+          <div class="address-container">
+            <a class="logo footer__logo" href="./index.html" lang="en"
+              ><span class="logo__accent">Web</span>Studio</a
+            >
+            <address class="footer-address">
+              <ul class="address-list list">
+                <li class="address-list__item">
+                  <a
+                    href="https://bit.ly/3pXMvUd"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="address-list__link address-list__link_active"
+                    >г. Киев, пр-т Леси Украинки, 26</a
+                  >
+                </li>
+                <li class="address-list__item">
+                  <a href="mailto:info@example.com" class="address-list__link">info@example.com</a>
+                </li>
+                <li class="address-list__item">
+                  <a href="tel:+380991111111" class="address-list__link">+38 099 111 11 11</a>
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="social-wrapper">
+            <p class="social-text">присоединяйтесь</p>
+            <ul class="footer-social list">
+              <li class="footer-social__item">
+                <a class="footer-social__link link" href=""
+                  ><svg class="footer-social__icon" width="20" height="20">
+                    <use href="./images/icons.svg#instagram"></use></svg
+                ></a>
               </li>
-              <li class="address-list__item">
-                <a href="mailto:info@example.com" class="address-list__link">info@example.com</a>
+              <li class="footer-social__item">
+                <a class="footer-social__link link" href=""
+                  ><svg class="footer-social__icon" width="20" height="20">
+                    <use href="./images/icons.svg#twitter"></use></svg
+                ></a>
               </li>
-              <li class="address-list__item">
-                <a href="tel:+380991111111" class="address-list__link">+38 099 111 11 11</a>
+              <li class="footer-social__item">
+                <a class="footer-social__link link" href=""
+                  ><svg class="footer-social__icon" width="20" height="20">
+                    <use href="./images/icons.svg#facebook"></use></svg
+                ></a>
+              </li>
+              <li class="footer-social__item">
+                <a class="footer-social__link link" href=""
+                  ><svg class="footer-social__icon" width="20" height="20">
+                    <use href="./images/icons.svg#linkedin"></use></svg
+                ></a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="social-wrapper">
-          <p class="social-text">присоединяйтесь</p>
-          <ul class="footer-social list">
-            <li class="footer-social__item">
-              <a class="footer-social__link link" href=""
-                ><svg class="footer-social__icon" width="20" height="20">
-                  <use href="./images/icons.svg#instagram"></use></svg
-              ></a>
-            </li>
-            <li class="footer-social__item">
-              <a class="footer-social__link link" href=""
-                ><svg class="footer-social__icon" width="20" height="20">
-                  <use href="./images/icons.svg#twitter"></use></svg
-              ></a>
-            </li>
-            <li class="footer-social__item">
-              <a class="footer-social__link link" href=""
-                ><svg class="footer-social__icon" width="20" height="20">
-                  <use href="./images/icons.svg#facebook"></use></svg
-              ></a>
-            </li>
-            <li class="footer-social__item">
-              <a class="footer-social__link link" href=""
-                ><svg class="footer-social__icon" width="20" height="20">
-                  <use href="./images/icons.svg#linkedin"></use></svg
-              ></a>
-            </li>
-          </ul>
+          </div>
         </div>
         <div class="form-container">
           <p class="form-text">Подпишитесь на рассылку</p>
@@ -363,5 +798,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
