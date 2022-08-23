@@ -1063,6 +1063,11 @@ img {
     width: 450px;
   }
 }
+@media screen and (max-width: 767px) {
+  .social-wrapper {
+    margin-bottom: 60px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .footer__container {
     display: flex;
