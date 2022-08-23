@@ -64,7 +64,7 @@
   background-color: rgba(33, 150, 243, 0.9);
   pointer-events: none;
 
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform var(--transition-duration) var(--transition-timing-function);
 
   .portfolio-cards__link:hover &,
@@ -109,6 +109,7 @@
 @media screen and (min-width: 768px) {
   .button-list {
     justify-content: center;
+    margin-bottom: 30px;
   }
 
   .portfolio-cards {
@@ -133,5 +134,9 @@
   .cards-content {
     max-width: 370px;
     flex-grow: 0;
+  }
+
+  .button-list {
+    margin-bottom: 50px;
   }
 }

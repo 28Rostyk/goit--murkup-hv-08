@@ -9,7 +9,6 @@
 .team-content {
   padding-top: 30px;
   padding-bottom: 24px;
-  margin-bottom: 30px;
 }
 
 .section-team__subtitle {
@@ -61,6 +60,12 @@
 
   &__icon {
     fill: currentColor;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .team-content {
+    margin-bottom: 30px;
   }
 }
 
