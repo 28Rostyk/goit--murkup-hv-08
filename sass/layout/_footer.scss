@@ -19,7 +19,6 @@
 
 .footer-address {
   margin-top: 20px;
-  margin-bottom: 20px;
   font-style: normal;
 }
 
@@ -152,9 +151,9 @@
     width: 450px;
   }
 }
-@media screen and (max-width: 767px) {
-  .social-wrapper {
-    margin-bottom: 60px;
+@media screen and (max-width: 1199px) {
+  .form-container {
+    margin-top: 60px;
   }
 }
 
@@ -167,6 +166,10 @@
   .address-container {
     text-align: left;
     margin-right: 70px;
+  }
+
+  .social-text {
+    text-align: left;
   }
 
   .form-text {

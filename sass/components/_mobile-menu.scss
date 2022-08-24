@@ -79,11 +79,16 @@
     }
   }
 
+  .mobile-menu-social__item:not(:last-child) {
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: 1px solid #212121;
+  }
+
   .mobile-menu-social {
     display: flex;
     flex-wrap: wrap;
     margin-top: 64px;
-    gap: 20px;
   }
 
   .mobile-menu-social__link {
